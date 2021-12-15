@@ -2,7 +2,7 @@
 
 ROS Kinetic metapackage for the KAWADA HIRO-NX.
 
-## Requirement
+## Requirement (tested)
 
 - Ubuntu 16.04
 - ROS Kinetic
@@ -47,18 +47,17 @@ ROS Kinetic metapackage for the KAWADA HIRO-NX.
    - \$ `roslaunch hironx_moveit_config moveit_planning_execution.launch`  
    - When the rviz screen comes up, completed preparation
 
-4. Execute python script (a script to move robot's head)  
-   - \$ `python scripts/hiro_head_banging.py`
+4. Execute python script
+   - \$ `rosrun hironx_stack head_banging.py`
+   - \$ `rosrun hironx_stack turn_waist.py`
+   - \$ `rosrun hironx_stack move_arms.py`
 
-5. Script to moves robot's hips
-   - \$ `python scripts/hiro_turn_waist.py`
+5. Shutdown the robot   
 
-6. Shutdown the robot   
-
-(6-1) GUI    
+(5-1) GUI    
    - Push `go power-off pose` button   
 
-(6-2) CUI
+(5-2) CUI
    - `robot.goOffPose()`  
 
 ## References
@@ -66,6 +65,7 @@ ROS Kinetic metapackage for the KAWADA HIRO-NX.
 [RTMROS_NEXTAGE reference (Japanese)](https://rtmros-nextage.readthedocs.io/en/latest/index.html)  
 [MoveIt! Commander reference](http://docs.ros.org/kinetic/api/moveit_commander/html/index.html)  
 
-## Author
+## Authors / Contributors
 
 [Takuya Kiyokawa](https://takuya-ki.github.io/)  
+
