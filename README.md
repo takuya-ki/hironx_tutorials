@@ -1,6 +1,6 @@
 # hironx_stack
 
-ROS Kinetic metapackage for the KAWADA HIRO-NX.
+ROS Kinetic metapackage for the KAWADA HIRO-NX
 
 ## Requirement (tested)
 
@@ -10,24 +10,29 @@ ROS Kinetic metapackage for the KAWADA HIRO-NX.
 
 ## Installation
 
-1. Network configuration (only one time)  
-  
-  ![PC network setting](./img/hiro_network.png)
+1. Connect an ethernet cable between the controller and your PC
 
-2. Register hiro's IP address  
-   \$ `sudo vim /etc/hosts`  
-   Add below  
+<img src=img/lan_port.jpg width=300>
+
+2. Set network configuration below
+
+<img src=img/hiro_network.png width=300>
+
+3. Register hiro's IP address in /etc/hosts  
    `10.254.12.1 hiro012`
+
 
 ## Usage
 
 1. Bring HIRO-NX up  
-   - Push a green button of back of HIRO-NX.
-   - If the 4-color blinking keeps after 5 to 10 minutes, restart with the green button.  
-   - When it blinks green and white only, you are ready to use.
-   - If the red light is on, the emergency stop button may have been pressed.
+   - Push a green button of back of HIRO-NX
+   - If the 4-color blinking keeps after 5 to 10 minutes, restart with the green button
+   - When it blinks green and white only, you are ready to use
+   - If the red light is on, the emergency stop button may have been pressed  
+  
+<img src=img/power_button.jpg width=300>  <img src=img/front.jpg width=310>
 
-2. Calibration and initialization (choose from the following two options)  
+1. Calibration and initialization (choose from the following two options)  
 
 (2-1) GUI activation (selective)  
    - \$ `rtmlaunch hironx_ros_bridge hironx_ros_bridge_real.launch nameserver:=hiro012`  
