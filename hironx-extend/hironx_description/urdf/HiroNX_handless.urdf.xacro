@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<robot name="HiroNX" xmlns:xacro="http://ros.org/wiki/xacro">
+	<xacro:include filename="$(find hironx_description)/urdf/HiroNX.xacro"/>
+
+	<!--  Arguments for the HiroNX macro  -->
+	<xacro:property name="RARM_TIP_Link" value="RARM_JOINTEE_Link"/>
+	<xacro:property name="LARM_TIP_Link" value="LARM_JOINTEE_Link"/>
+
+	<link name="world"/>
+	<gazebo reference="world">
+		<static>true</static>
+	</gazebo>
+
+	<!-- Here we insert an HiroNX robot in the scene, it's origin is just on top of the box previously defined (if any). You can use 0,0,0 if you don't have that. -->
+	<xacro:HiroNX parent="world">
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+	</xacro:HiroNX>
+
+</robot>
