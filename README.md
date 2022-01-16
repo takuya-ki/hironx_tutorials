@@ -45,10 +45,10 @@ ROS Kinetic metapackage for the KAWADA HIRO-NX
    - `$ roslaunch hironx_moveit_config moveit_planning_execution.launch`  
    - When the rviz screen comes up, the preparation has been completed  
 
-3. Execute python script
-   - `$ rosrun hironx_stack head_banging.py`
-   - `$ rosrun hironx_stack turn_waist.py`
-   - `$ rosrun hironx_stack move_arms.py`
+3. Launch demonstrations
+   - `$ roslaunch hironx_stack head_banging.launch`
+   - `$ roslaunch hironx_stack turn_waist.launch`
+   - `$ roslaunch hironx_stack move_arms.launch`
 
 4. Shutdown the robot   
    - GUI  

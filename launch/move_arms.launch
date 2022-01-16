@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="hiro_stack" name="move_arms" type="move_arms.py" output="screen"/>
+</launch>
