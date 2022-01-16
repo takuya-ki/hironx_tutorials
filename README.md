@@ -64,3 +64,7 @@ ROS Kinetic metapackage for the KAWADA HIRO-NX
 ## Author / Contributor
 
 [Takuya Kiyokawa](https://takuya-ki.github.io/)  
+
+## License
+
+This software is released under the MIT License, see [LICENSE](./LICENSE).
