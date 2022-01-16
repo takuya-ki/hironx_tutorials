@@ -4,28 +4,25 @@ project(hironx_stack)
 find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
-  message_generation
-)
-
-add_message_files(
-  FILES
-  Pos.msg
-  State.msg
-)
-
-generate_messages(
-  DEPENDENCIES
-  std_msgs
+  geometry_msgs
+  moveit_core
+  moveit_ros_planning_interface
+  tf
 )
 
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES spring_seminar
-#  CATKIN_DEPENDS rospy std_msgs
-#  DEPENDS system_lib
+  CATKIN_DEPENDS
+    rospy
+    std_msgs
+    geometry_msgs
+    moveit_core
+    moveit_ros_planning_interface
+    tf
 )
 
 include_directories(
-# include
   ${catkin_INCLUDE_DIRS}
 )
+
+catkin_install_python(PROGRAMS scripts/head_banging.py scripts/turn_waist.py scripts/move_arms.py
+                      DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
