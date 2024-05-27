@@ -1,3 +1,3 @@
 <launch>
-    <node pkg="hironx_stack" name="turn_waist" type="turn_waist.py" output="screen"/>
+    <node pkg="hironx_tutorials" name="turn_waist" type="turn_waist.py" output="screen"/>
 </launch>

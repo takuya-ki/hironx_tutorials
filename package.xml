@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>hironx_stack</name>
+  <name>hironx_tutorials</name>
   <version>0.0.0</version>
   <description>ROS Kinetic metapackage for the KAWADA HIRO-NX.</description>
   <maintainer email="taku8926@gmail.com">takuya-ki</maintainer>

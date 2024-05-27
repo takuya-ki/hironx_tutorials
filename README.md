@@ -1,4 +1,4 @@
-# hironx_stack
+# hironx_tutorials
 
 ROS sample programs for the KAWADA HIRO-NX
 
@@ -35,7 +35,7 @@ ROS sample programs for the KAWADA HIRO-NX
      - Wait for the robot to finish moving  
      - Push `Goto init pose` button  
 
-<img src=img/gui.jpg width=240>
+<img src=img/gui.png width=240>
 
    - CUI  
      - ``$ ipython -i `rospack find hironx_ros_bridge`/scripts/hironx.py --host hiro012 ``  
@@ -52,9 +52,9 @@ ROS sample programs for the KAWADA HIRO-NX
 <img src=img/rviz.gif width=280>
 
 1. Execute demonstrations
-   - `$ roslaunch hironx_stack head_banging.launch`
-   - `$ roslaunch hironx_stack turn_waist.launch`
-   - `$ roslaunch hironx_stack move_arms.launch`
+   - `$ roslaunch hironx_tutorials head_banging.launch`
+   - `$ roslaunch hironx_tutorials turn_waist.launch`
+   - `$ roslaunch hironx_tutorials move_arms.launch`
 
 <img src=img/head_comp.gif width=240>  <img src=img/waist_comp.gif width=240> <img src=img/arms_comp.gif width=240>
 
