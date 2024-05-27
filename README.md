@@ -30,7 +30,7 @@ ROS sample programs for the KAWADA HIRO-NX
 
 2. Caribrate and initialize all joints (select from the following two options)  
    - GUI    
-     - `$ rtmlaunch hironx_ros_bridge hironx_ros_bridge_real.launch nameserver:=hiro012`  
+     - `rtmlaunch hironx_ros_bridge hironx_ros_bridge_real.launch nameserver:=hiro012`  
      - Push `joint calibration` button after GUI openning  
      - Wait for the robot to finish moving  
      - Push `Goto init pose` button  
@@ -38,7 +38,7 @@ ROS sample programs for the KAWADA HIRO-NX
 <img src=img/gui.png width=240>
 
    - CUI  
-     - ``$ ipython -i `rospack find hironx_ros_bridge`/scripts/hironx.py --host hiro012 ``  
+     - ``ipython -i `rospack find hironx_ros_bridge`/scripts/hironx.py --host hiro012 ``  
      - `robot.checkEncoders()` after ipython openning  
      - Wait for the robot to finish moving  
      - `robot.goInitial()`
@@ -46,15 +46,15 @@ ROS sample programs for the KAWADA HIRO-NX
 <img src=img/calibrate_comp.gif width=240>  <img src=img/initialize_comp.gif width=240>
 
 3. Open rviz and moveit    
-   - `$ roslaunch hironx_moveit_config moveit_planning_execution.launch`  
+   - `roslaunch hironx_moveit_config moveit_planning_execution.launch`  
    - When the rviz screen comes up, the preparation has been completed  
 
 <img src=img/rviz.gif width=280>
 
 1. Execute demonstrations
-   - `$ roslaunch hironx_tutorials head_banging.launch`
-   - `$ roslaunch hironx_tutorials turn_waist.launch`
-   - `$ roslaunch hironx_tutorials move_arms.launch`
+   - `roslaunch hironx_tutorials head_banging.launch`
+   - `roslaunch hironx_tutorials turn_waist.launch`
+   - `roslaunch hironx_tutorials move_arms.launch`
 
 <img src=img/head_comp.gif width=240>  <img src=img/waist_comp.gif width=240> <img src=img/arms_comp.gif width=240>
 
