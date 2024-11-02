@@ -24,5 +24,5 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-catkin_install_python(PROGRAMS scripts/head_banging.py scripts/turn_waist.py scripts/move_arms.py
+catkin_install_python(PROGRAMS scripts/head_banging.py scripts/turn_waist.py scripts/move_arms.py scripts/wave_arms.py
                       DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})

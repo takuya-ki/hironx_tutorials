@@ -35,29 +35,30 @@ ROS sample programs for the KAWADA HIRO-NX
      - Push `joint calibration` button after GUI openning  
      - Wait for the robot to finish moving  
      - Push `Goto init pose` button  
-      <img src=img/gui.png width=240>
+      <img src=img/gui.png height=180>
    - CUI  
      - ``ipython -i `rospack find hironx_ros_bridge`/scripts/hironx.py --host hiro012``  
      - `robot.checkEncoders()` after ipython openning  
      - Wait for the robot to finish moving  
      - `robot.goInitial()`  
-      <img src=img/calibrate_comp.gif width=240>  <img src=img/initialize_comp.gif width=240>
+      <img src=img/calibrate.gif height=180>  <img src=img/initializ.gif height=180>
 3. Open rviz and moveit    
    - `roslaunch hironx_moveit_config moveit_planning_execution.launch`  
    - When the rviz screen comes up, the preparation has been completed  
-      <img src=img/rviz.png width=280>
+      <img src=img/rviz.png height=180>
 4. Execute demonstrations
    - `roslaunch hironx_tutorials head_banging.launch`  
    - `roslaunch hironx_tutorials turn_waist.launch`  
    - `roslaunch hironx_tutorials move_arms.launch`  
-      <img src=img/head_comp.gif width=240>  <img src=img/waist_comp.gif width=240> <img src=img/arms_comp.gif width=240>
+   - `roslaunch hironx_tutorials wave_arms.launch`  
+      <img src=img/head_banging.gif height=180>  <img src=img/turn_waist.gif height=180> <img src=img/move_arms.gif height=180> <img src=img/wave_arms.gif height=180>
 
 ### Shutdown the robot   
    - GUI  
      - Push `Goto power-off pose` button   
    - CUI
      - `robot.goOffPose()`  
-      <img src=img/off_comp.gif width=240>
+      <img src=img/offpose.gif height=180>
 
 ## References
 

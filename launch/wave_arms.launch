@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="hironx_tutorials" name="wave_arms" type="wave_arms.py" output="screen"/>
+</launch>
