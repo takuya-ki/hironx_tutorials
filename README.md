@@ -19,17 +19,23 @@ ROS sample programs for the KAWADA HIRO-NX
    <img src=img/hironx_network.png width=280>
 3. Register the IP address of the HIRO-NX in /etc/hosts  
    `10.254.12.1 hiro012`
+4. Install this repository
+   `git clone git@github.com:takuya-ki/hironx_tutorials.git --depth 1 && cd hironx_tutorials`
+5. Build the docker environment
+   `COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker compose build --no-cache --parallel`
 
 ## Usage
 ### Execute a demonstration
 
-1. Launch HIRO-NX  
+1. Run the docker container
+   `docker compose up`
+2. Launch HIRO-NX  
    - Push the green button located on the back of the HIRO-NX  
    - If the four LEDs blinking in different colors remained after 5 to 10 min, restart by pushing the green button  
    - When two of them blink only in green and white, the robot is ready to be controlled  
    - If the red LED is turned on, the emergency stop button may have been pressed  
       <img src=img/power_button.jpg width=290>  <img src=img/front.jpg width=300>
-2. Caribrate and initialize all joints (select from the following two options)  
+3. Caribrate and initialize all joints (select from the following two options)  
    - GUI    
      - `rtmlaunch hironx_ros_bridge hironx_ros_bridge_real.launch nameserver:=hiro012`  
      - Push `joint calibration` button after GUI openning  
@@ -42,18 +48,18 @@ ROS sample programs for the KAWADA HIRO-NX
      - Wait for the robot to finish moving  
      - `robot.goInitial()`  
       <img src=img/calibrate.gif height=180>  <img src=img/initializ.gif height=180>
-3. Open rviz and moveit    
+4. Open rviz and moveit    
    - `roslaunch hironx_moveit_config moveit_planning_execution.launch`  
    - When the rviz screen comes up, the preparation has been completed  
       <img src=img/rviz.png height=180>
-4. Execute demonstrations
+5. Execute demonstrations
    - `roslaunch hironx_tutorials head_banging.launch`  
    - `roslaunch hironx_tutorials turn_waist.launch`  
    - `roslaunch hironx_tutorials move_arms.launch`  
    - `roslaunch hironx_tutorials wave_arms.launch`  
       <img src=img/head_banging.gif height=180>  <img src=img/turn_waist.gif height=180> <img src=img/move_arms.gif height=180> <img src=img/wave_arms.gif height=180>
 
-### Shutdown the robot   
+### Shutdown the robot  
    - GUI  
      - Push `Goto power-off pose` button   
    - CUI
